@@ -23,17 +23,13 @@ This analysis is a machine learning program being used to identify if a loan app
 
 Each of these results contain scores for precision, recall and f1-score.
 
-The recall means "how many of this class you find over the whole number of element of this class"
+- In all of these models the recall for high risk loans is very low indicating they do not predict many. Conversely the low risk loans have a very high recall meaning the model does predicts far more correctly. 
 
-The precision will be "how many are correctly classified among that class"
+- The combined performed the best on recall with 71% on high risk loans. Oversampling did the best on low risk loans at 68%.
 
-The f1-score is the harmonic mean between precision & recall
-
-The support is the number of occurence of the given class in your dataset (so you have 37.5K of class 0 and 37.5K of class 1, which is a really well balanced dataset.
-
-The thing is, precision and recall is highly used for imbalanced dataset because in an highly imbalanced dataset, a 99% accuracy can be meaningless.
+- The f1-score which combines the two previously mentioned statistics indicate none of the models are very good with high risk loans. SMOTE Oversampling has the best f1 score for low risk loans.
 
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all six machine learning models. Use screenshots of your outputs to support your results.
+## Summary: 
 
-Summary: Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+In summary if I was to pick one of the models I would use SMOTE Oversampling because it seems to have the best balance overall. I would however make clear that with these results human hands would still need to be involved in the process due to the lower values present in the statistics.
